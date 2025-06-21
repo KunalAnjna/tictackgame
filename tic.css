@@ -1,0 +1,69 @@
+/* Reset and base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    background-color: #121212;
+    color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    user-select: none;
+  }
+  h1 {
+    margin-bottom: 24px;
+  }
+  /* Game board */
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 12px;
+  }
+  .cell {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    font-size: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow:
+      0 4px 6px rgba(0, 0, 0, 0.7),
+      inset 0 -4px 4px rgba(255, 255, 255, 0.1);
+    transition: background-color 0.2s ease;
+  }
+  .cell:hover {
+    background-color: #2a2a2a;
+  }
+  .cell.x {
+    color: #1db954; /* green for X */
+  }
+  .cell.o {
+    color: #e0245e; /* red/pink for O */
+  }
+  /* Game status */
+  .status {
+    margin-top: 24px;
+    font-size: 1.6rem;
+  }
+  /* Reset button */
+  button.reset {
+    margin-top: 24px;
+    padding: 10px 24px;
+    font-size: 1.2rem;
+    background-color: #1db954;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgb(29 185 84 / 0.6);
+    transition: background-color 0.3s ease;
+  }
+  button.reset:hover {
+    background-color: #18a64c;
+  }
